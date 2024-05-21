@@ -16,8 +16,8 @@ public class Test1 {
 
 		// "/" 除法
 		int c = 15/2; // 7
-		double d = 15/2; // 
-		double e = 15/2.0; // 
+		double d = 15/2; // 7.0
+		double e = 15/2.0; // 7.5
 		System.out.println(c);
 		System.out.println(d);
 		System.out.println(e);
@@ -29,6 +29,12 @@ public class Test1 {
 		System.out.printf("15/2 = %d%n", c);
 		System.out.printf("15/2 = %.1f%n", d);
 		System.out.printf("15/2.0 = %.1f%n", e);
+
+		System.out.println(0/10);
+		//System.out.println(10/0); // 整數運算時分母不可為零,無意義
+		System.out.println(10.0/0); // Infinity
+		System.out.println(10/0.0); // Infinity
+		System.out.println(10.0/0.0); // Infinity
 	}
 
 }
