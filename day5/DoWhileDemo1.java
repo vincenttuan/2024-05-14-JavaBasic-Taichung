@@ -15,6 +15,12 @@ public class DoWhileDemo1 {
 			Scanner scanner = new Scanner(System.in);
 			System.out.print("請輸入(1~9): ");
 			int guess = scanner.nextInt();
+			// 確認所輸入的資料是否在合法範圍?
+			if(guess < 1 || guess > 9) {
+				System.out.println("數字範圍不正確, 請重新輸入");
+				continue;
+			}
+
 			count--; // 次數減一
 			// 比對使用者輸入的數字(guess)是否與答案(ans)相同
 			if(guess > ans) {
@@ -26,6 +32,7 @@ public class DoWhileDemo1 {
 				break;
 			}
 		} while(count > 0);
+		System.out.println("Game Over !");
 
 	}
 
